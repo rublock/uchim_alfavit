@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="section"> <!-- Основная секция -->
+        <div class="container"> <!-- Основной контейнер -->
+          <div class="catalog"> <!-- Блок каталога -->
+            <div class="catalog__flex"> <!-- Родитеский блок сетки -->
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БА" preload="auto">
+                        <source src="swf/БА.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БА').play()">БА</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЯ" preload="auto">
+                        <source src="swf/БЯ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЯ').play()">БЯ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БУ" preload="auto">
+                        <source src="swf/БУ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БУ').play()">БУ</a>
+                </div>
+              </div>
+
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЮ" preload="auto">
+                        <source src="swf/БЮ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЮ').play()">БЮ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БО" preload="auto">
+                        <source src="swf/БО.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БО').play()">БО</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЁ" preload="auto">
+                        <source src="swf/БЁ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЁ').play()">БЁ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЭ" preload="auto">
+                        <source src="swf/БЭ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЭ').play()">БЭ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЕ" preload="auto">
+                        <source src="swf/БЕ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЕ').play()">БЕ</a>
+                </div>
+              </div>
+
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЫ" preload="auto">
+                        <source src="swf/БЫ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЫ').play()">БЫ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БИ" preload="auto">
+                        <source src="swf/БИ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БИ').play()">БИ</a>
+                </div>
+              </div>
+
+              <div class="catalog__col">
+                <div class="catalog__card card">
+                    <audio id="БЬ" preload="auto">
+                        <source src="swf/БЬ.mp3" type="audio/mpeg">
+                    </audio>
+                    <a class="href" onclick="document.getElementById('БЬ').play()">БЬ</a>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<style>
+
+.href {
+    font-size: 25px; color: #253ab6; font-weight: bold;
+}
+.section {
+  margin: 10px 0 /* внешние отступы для блока - сверху и снизу по 60px, слева и справа по 0px */;
+}
+.container {
+  max-width: 300px /* максимальная ширина контейнера */;
+  margin: 0 auto /* расположение контейнера по центру */;
+  padding: 0 30px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
+}
+.catalog__flex {
+  display: flex /* по умолчанию дочерние блоки(.catalog__col) будут располагаться в ряд */;
+  flex-wrap: wrap /* дочерние блоки переносятся на следующую строку, если ширина всех внутренних блоков превышает ширину родительского блока(.catalog__flex) */;
+  margin: 0 -15px -30px /* Отрицательные внешние отступы(значения противоположные значениям padding блока .catalog__col), чтобы компенсировать внутренние отступы дочерних блоков(.catalog__col), НЕ ДОЛЖЕН превышать боковых значений padding блока .container*/;
+}
+.catalog__col {
+  width: 10% /* Задаем ширину блока(по 4 блока в ряд)*/;
+  padding: 0 15px 30px /* Размер внутренних отступов блока - справа и слева по 15px(которые дают общий отступ 30px между блоками) и снизу отступ 30px */;
+}
+
+@media (max-width: 1199.98px) {
+  .catalog__col {
+    width: 33.33333333% /* при ширине браузера меньше 1200px будет по 3 блока в ряд */;
+  }
+}
+@media (max-width: 991.98px) {
+  .catalog__col {
+    width: 50% /* при ширине браузера меньше 992px будет по 2 блока в ряд */;
+  }
+}
+@media (max-width: 575.98px) {
+  .catalog__col {
+    width: 100% /* при ширине браузера меньше 576px будет по 1 блоку */;
+  }
+}
+
+</style>
+</body>
+</html>
