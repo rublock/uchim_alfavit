@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,107 +13,36 @@
         <div class="container"> <!-- Основной контейнер -->
           <div class="catalog"> <!-- Блок каталога -->
             <div class="catalog__flex"> <!-- Родитеский блок сетки -->
-
+            {% for i, j in main_list %}
               <div class="catalog__col">
                 <div class="catalog__card card">
-                    <audio id="БА" preload="auto">
-                        <source src="swf/БА.mp3" type="audio/mpeg">
+                    <audio id="{{ j }}" preload="auto">
+                        <source src="{% static 'audio/' %}{{ i }}" type="audio/mpeg">
                     </audio>
-                    <a class="href" onclick="document.getElementById('БА').play()">БА</a>
+                    <a class="href" onclick="document.getElementById('{{ j }}').play()">{{ j }}</a>
                 </div>
               </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЯ" preload="auto">
-                        <source src="swf/БЯ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЯ').play()">БЯ</a>
-                </div>
-              </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БУ" preload="auto">
-                        <source src="swf/БУ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БУ').play()">БУ</a>
-                </div>
-              </div>
+            {% endfor %}
 
 
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЮ" preload="auto">
-                        <source src="swf/БЮ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЮ').play()">БЮ</a>
-                </div>
-              </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БО" preload="auto">
-                        <source src="swf/БО.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БО').play()">БО</a>
-                </div>
-              </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЁ" preload="auto">
-                        <source src="swf/БЁ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЁ').play()">БЁ</a>
-                </div>
-              </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЭ" preload="auto">
-                        <source src="swf/БЭ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЭ').play()">БЭ</a>
-                </div>
-              </div>
-
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЕ" preload="auto">
-                        <source src="swf/БЕ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЕ').play()">БЕ</a>
-                </div>
-              </div>
 
 
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЫ" preload="auto">
-                        <source src="swf/БЫ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЫ').play()">БЫ</a>
-                </div>
-              </div>
 
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БИ" preload="auto">
-                        <source src="swf/БИ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БИ').play()">БИ</a>
-                </div>
-              </div>
 
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="БЬ" preload="auto">
-                        <source src="swf/БЬ.mp3" type="audio/mpeg">
-                    </audio>
-                    <a class="href" onclick="document.getElementById('БЬ').play()">БЬ</a>
-                </div>
-              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
