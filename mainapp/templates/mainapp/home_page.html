@@ -1,13 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
     <div class="section"> <!-- Основная секция -->
         <div class="container"> <!-- Основной контейнер -->
@@ -19,83 +13,14 @@
                     <audio id="{{ j }}" preload="auto">
                         <source src="{% static 'audio/' %}{{ i }}" type="audio/mpeg">
                     </audio>
-                    <a class="href" onclick="document.getElementById('{{ j }}').play()">{{ j }}</a>
+                    <a class="href" style="text-decoration: none; cursor: pointer" onclick="document.getElementById('{{ j }}').play()">{{ j }}</a>
                 </div>
               </div>
             {% endfor %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             </div>
           </div>
         </div>
       </div>
 
-
-<style>
-
-.href {
-    font-size: 25px; color: #253ab6; font-weight: bold;
-}
-.section {
-  margin: 10px 0 /* внешние отступы для блока - сверху и снизу по 60px, слева и справа по 0px */;
-}
-.container {
-  max-width: 300px /* максимальная ширина контейнера */;
-  margin: 0 auto /* расположение контейнера по центру */;
-  padding: 0 30px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
-}
-.catalog__flex {
-  display: flex /* по умолчанию дочерние блоки(.catalog__col) будут располагаться в ряд */;
-  flex-wrap: wrap /* дочерние блоки переносятся на следующую строку, если ширина всех внутренних блоков превышает ширину родительского блока(.catalog__flex) */;
-  margin: 0 -15px -30px /* Отрицательные внешние отступы(значения противоположные значениям padding блока .catalog__col), чтобы компенсировать внутренние отступы дочерних блоков(.catalog__col), НЕ ДОЛЖЕН превышать боковых значений padding блока .container*/;
-}
-.catalog__col {
-  width: 10% /* Задаем ширину блока(по 4 блока в ряд)*/;
-  padding: 0 15px 30px /* Размер внутренних отступов блока - справа и слева по 15px(которые дают общий отступ 30px между блоками) и снизу отступ 30px */;
-}
-
-@media (max-width: 1199.98px) {
-  .catalog__col {
-    width: 33.33333333% /* при ширине браузера меньше 1200px будет по 3 блока в ряд */;
-  }
-}
-@media (max-width: 991.98px) {
-  .catalog__col {
-    width: 50% /* при ширине браузера меньше 992px будет по 2 блока в ряд */;
-  }
-}
-@media (max-width: 575.98px) {
-  .catalog__col {
-    width: 100% /* при ширине браузера меньше 576px будет по 1 блоку */;
-  }
-}
-
-</style>
-</body>
-</html>
+{% endblock content %}
