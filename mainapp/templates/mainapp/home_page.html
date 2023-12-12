@@ -2,25 +2,22 @@
 {% block content %}
 {% load static %}
 
-
-    <div class="section"> <!-- Основная секция -->
-        <div class="container"> <!-- Основной контейнер -->
-          <div class="catalog"> <!-- Блок каталога -->
-            <div class="catalog__flex"> <!-- Родитеский блок сетки -->
-            {% for i, j in main_list %}
-              <div class="catalog__col">
-                <div class="catalog__card card">
-                    <audio id="{{ j }}" preload="auto">
-                        <source src="{% static 'audio/' %}{{ i }}" type="audio/mpeg">
-                    </audio>
-                    <a class="href" style="text-decoration: none; cursor: pointer" onclick="document.getElementById('{{ j }}').play()">{{ j }}</a>
-                </div>
-              </div>
-            {% endfor %}
-
-            </div>
-          </div>
+<div class="container">
+  <div class="feature">
+   {% for i, j in main_list %}
+        <div type="button" class="item item--1" onclick="document.getElementById('{{ j }}').play()">
+            <audio id="{{ j }}" preload="auto">
+                <source src="{% static 'audio/' %}{{ i }}" type="audio/mpeg">
+            </audio>
+            <a class="href" style="text-decoration: none; cursor: pointer">{{ j }}</a>
         </div>
-      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
 
 {% endblock content %}
+

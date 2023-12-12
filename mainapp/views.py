@@ -4,7 +4,7 @@ import os
 
 
 def home_page(request):
-    folder_path = 'mainapp/static/audio'
+    folder_path = 'static/audio'
     files = os.listdir(folder_path)
 
     audio_files = []
