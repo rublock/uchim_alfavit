@@ -1,37 +1,17 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
 html, body {
   background-color: lightgray;
   height: 100%;
   width: 100vw;
-
 }
 
-.container {
 
-  min-height: 100%;
-  width: 100%;
-  padding: 5rem;
-  background-color: inherit;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .feature {
-  display: grid;
-  padding: 1rem;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  column-gap: 0.5rem;
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 10fr));
+    column-gap: 0.5rem;
 }
 
 .item {
@@ -39,7 +19,7 @@ html, body {
     margin: 4px;
     padding: -4px;
     color: white;
-    font-size: 13.5rem;
+    font-size: 1rem;
     font-family: sans-serif;
     text-transform: uppercase;
     border-radius: 15.2rem;
